@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Count All Students</title>
+  <title>Average All Students</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -15,15 +15,15 @@
 <body>
   <main class="container-fluid">
 
-    <h1>Section Estimator</h1>
-    <h3>Enter values to find total number of students</h3>
+    <h1>Students Per Section</h1>
+    <h3>Enter values to find the average number of students per section</h3>
 
     <p>Enter your name:
-      <input id="guest" type="text" value="Eden">
+      <input id="guest" type="text" value="Bob">
     </p>
 
-    <p>EEnter the number of students:
-      <input id="firstNumber" type="number" value="20">
+    <p>EEnter the total number of students:
+      <input id="firstNumber" type="number" value="18">
     </p>
 
     <p>Enter the number of sections:
@@ -41,10 +41,10 @@
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function divide(x, y) {
+      return x / y
     }
-    console.log('Defined add=' + add)
+    console.log('Defined divide=' + divide)
 
     console.log('Declare event listeners .......................')
 
@@ -54,7 +54,7 @@
       console.log('i=' + i)
       const j = parseInt(document.getElementById('secondNumber').value)
       console.log('j=' + j)
-      const ans = s + ', the number of students is ' + i * j + '.'
+      const ans = s + ', the average number of students is ' + divide(i,j) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
